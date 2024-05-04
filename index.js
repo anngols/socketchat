@@ -2,6 +2,11 @@ import http from "http";
 import path from "path"
 import fs from "fs"
 import {Server} from "socket.io"
+import {addMessages, getMessages} from "./database.js";
+await addMessages("hello", 1)
+let m = await getMessages()
+console.log(m)
+
 
 
 const __dirname = path.resolve();
