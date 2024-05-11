@@ -50,3 +50,11 @@ export async function addMessages(msg, userid) {
         console.error(error);
     }
 }
+export async function isExistUser(login){
+    try{
+        let candidat = await db.all(`SELECT * FROM user WHERE login = ?`, [login])
+        return !candidate.length
+    }catch(error){
+        console.log(errr)
+    }
+}
