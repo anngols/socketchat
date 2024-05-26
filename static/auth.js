@@ -32,7 +32,7 @@ document
         password: password.value
     }
     let xhr = new XMLHttpRequest
-    xhr.open("post", "/api/register")
+    xhr.open("post", "/api/login")
     xhr.onload = ()=>{
         if(xhr.status == 200){
             let token = xhr.response
